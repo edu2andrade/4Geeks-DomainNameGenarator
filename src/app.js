@@ -13,10 +13,14 @@ window.onload = function() {
 
   let nouns = ["jogger", "racoon"];
 
+  let domainList = [".com", ".es", ".co.uk", ".pt", ".com.br"];
+
   pronouns.forEach(pronoun => {
     adjs.forEach(adj => {
       nouns.forEach(noun => {
-        console.log(`${pronoun}${adj}${noun}.com`);
+        domainList.forEach(domain => {
+          console.log(`${pronoun}${adj}${noun}${domain}`);
+        });
       });
     });
   });
